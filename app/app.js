@@ -3,11 +3,8 @@
 
 	var app = angular.module('main', []);
 
-	app.directive('orsHeader', function() {
-		return {
-			restrict: 'E',
-			templateUrl: 'tmpl/ors-header.html'
-		};
+	app.component('orsHeader', {
+		templateUrl: 'tmpl/ors-header.html'
 	});
 
 
