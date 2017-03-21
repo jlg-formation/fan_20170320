@@ -3,7 +3,10 @@
 
 	var app = angular.module('main', ['ors-route']);
 
-	app.run(['$rootScope', '$location', function($rootScope, $location) {
+	app.run(['$injector', function($injector) {
+		var $rootScope = $injector.get('$rootScope');
+		var $location = $injector.get('$location');
+		
 		$rootScope.isActive = function(url) {
 			var path = $location.path();
 			console.log('path', path);
