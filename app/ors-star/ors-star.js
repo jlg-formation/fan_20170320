@@ -13,7 +13,8 @@
 				scope.$watch('n', function() {
 					var html = '';
 					var note = 4;
-					note = (scope.n === undefined) ? note : scope.n;
+					note = (scope.n === undefined) ? note : Number(scope.n);
+					note = (isNaN(note)) ? 0 : note;
 					note = (note > 5) ? 5 : note;
 					note = (note < 0) ? 0 : note;
 					for (let i = 0; i < note; i++) {
