@@ -19,4 +19,6 @@ menu item a:hover {
     background-color: hsla(240, 100%, 75%, 1); 
 }
 
-
+menu item a.active {
+    background-color: hsla(120, 100%, 75%, 1); 
+}
