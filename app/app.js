@@ -1,7 +1,7 @@
 (function() {
 	'use strict';
 
-	var app = angular.module('main', []);
+	var app = angular.module('main', ['ors-route']);
 
 	app.component('orsHeader', {
 		templateUrl: 'tmpl/ors-header.html'
