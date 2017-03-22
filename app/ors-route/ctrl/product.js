@@ -13,6 +13,14 @@
 
 			$http.get('../ws/s1').then(function(response) {
 				console.log('response', response);
+				return $q.all([
+					$http.get('../ws/s2'),
+					$http.get('../ws/s3'),
+					$http.get('../ws/s4')
+				]);
+			}).then(function(responses) {
+				console.log('responses', responses);
+				return $http.get('../ws/s5');
 			}).catch(function(error) {
 				console.error('error', error);
 			});
