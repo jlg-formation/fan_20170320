@@ -10,6 +10,12 @@
 
 		ctrl.start = function() {
 			console.log('Product ctrl Start', arguments);
+
+			$http.get('../ws/s1').then(function(response) {
+				console.log('response', response);
+			}).catch(function(error) {
+				console.error('error', error);
+			});
 		};
 	}]);
 
