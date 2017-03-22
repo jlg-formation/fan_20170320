@@ -16,7 +16,8 @@
     "eslint-config-google": "0.7.1",
     "express": "4.15.2",
     "serve-index": "1.8.0",
-    "webpack": "2.3.0"
+    "webpack": "2.3.0",
+    "webpack-dev-middleware": "1.10.1"
   },
   "dependencies": {
     "angular": "1.6.3",
