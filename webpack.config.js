@@ -24,10 +24,6 @@ module.exports = {
 				use: "css-loader?minimize&sourceMap!sass-loader?sourceMap"
 			})
 		}, {
-			test: /\.js$/,
-			exclude: /node_modules/,
-			loader: ['babel-loader', 'ng-annotate-loader']
-		}, {
 			test: /\.html$/,
 			use: [{
 				loader: 'ngtemplate-loader',
@@ -45,13 +41,14 @@ module.exports = {
 	},
 	plugins: [
 		new ExtractTextPlugin('[name].css'),
-		new webpack.optimize.UglifyJsPlugin({			
-			compress: {
-				warnings: false,
-			},
-			output: {
-				comments: false,
-			}
-		})
-	]
+		// new webpack.optimize.UglifyJsPlugin({
+		// 	compress: {
+		// 		warnings: false,
+		// 	},
+		// 	output: {
+		// 		comments: false,
+		// 	}
+		// })
+	],
+	devtool: 'source-map'
 };
