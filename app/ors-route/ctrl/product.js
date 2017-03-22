@@ -8,7 +8,7 @@
 		var $q = $injector.get('$q');
 		var $http = $injector.get('$http');
 
-		ctrl.start = function(){
+		ctrl.start = function() {
 			console.log('Product ctrl Start', arguments);
 		};
 	}]);
