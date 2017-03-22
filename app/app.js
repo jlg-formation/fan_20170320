@@ -1,5 +1,5 @@
 'use strict';
-
+import './style.css';
 import angular from 'angular';
 import './ors-route/ors-route.js';
 import './ors-route/ctrl/product.js';
