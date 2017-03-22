@@ -3,7 +3,10 @@ var orsRoute = 'ors-route';
 import 'angular-route';
 
 var app = angular.module(orsRoute, ['ngRoute']);
-
+import homeUrl from './tmpl/home.html';
+import contactUrl from './tmpl/contact.html';
+import productUrl from './tmpl/product.html';
+import serviceUrl from './tmpl/service.html';
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$locationProvider
 		.html5Mode(true)
@@ -11,18 +14,18 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
 	$routeProvider
 		.when('/', {
-			templateUrl: 'ors-route/tmpl/home.html'
+			templateUrl: homeUrl
 		})
 		.when('/product', {
-			templateUrl: 'ors-route/tmpl/product.html',
+			templateUrl: productUrl,
 			controller: 'ProductCtrl',
 			controllerAs: '$ctrl'
 		})
 		.when('/service', {
-			templateUrl: 'ors-route/tmpl/service.html'
+			templateUrl: serviceUrl
 		})
 		.when('/contact', {
-			templateUrl: 'ors-route/tmpl/contact.html'
+			templateUrl: contactUrl
 		})
 		.otherwise({
 			redirectTo: '/'

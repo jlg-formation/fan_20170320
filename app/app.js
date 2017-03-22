@@ -42,22 +42,23 @@ app.directive('orsActive', function() {
 	};
 });
 
+import orsHeaderUrl from './tmpl/ors-header.html';
 app.component('orsHeader', {
-	templateUrl: 'tmpl/ors-header.html'
+	templateUrl: orsHeaderUrl
 });
 
-
+import orsBodyUrl from './tmpl/ors-body.html';
 app.directive('orsBody', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'tmpl/ors-body.html'
+		templateUrl: orsBodyUrl
 	};
 });
 
-
+import orsFooterUrl from './tmpl/ors-footer.html';
 app.directive('orsFooter', function() {
 	return {
 		restrict: 'E',
-		templateUrl: 'tmpl/ors-footer.html',
+		templateUrl: orsFooterUrl,
 	};
 });
